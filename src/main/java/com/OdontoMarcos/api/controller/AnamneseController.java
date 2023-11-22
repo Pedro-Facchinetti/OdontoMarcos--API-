@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/anamneses")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AnamneseController {
 
     private final AnamneseService anamneseService;

@@ -1,14 +1,7 @@
 package com.OdontoMarcos.api.model;
 
 import lombok.Data;
-
 import jakarta.persistence.*;
-
-import com.OdontoMarcos.api.enums.Cor;
-import com.OdontoMarcos.api.enums.SimNao;
-import com.OdontoMarcos.api.enums.TipoAnamnese;
-import com.OdontoMarcos.api.enums.TipoParto;
-import com.OdontoMarcos.api.enums.TipoSanguineo;
 
 @Data
 @Entity
@@ -18,65 +11,71 @@ public class Anamnese {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
-    private TipoAnamnese tipoAnamnese;
-
-    @Column(nullable = false)
     private String motivoConsulta;
-
-    @Column(nullable = false)
     private Integer peso;
-
-    @Column(nullable = false)
     private Float altura;
+    private String tipoSanguineo;
 
-    @Enumerated(EnumType.STRING)
-    private Cor cor;
+    // Antecedentes do paciente
+    private String anemia;
+    private String cardiopatias;
+    private String hemorragia;
+    private String hemofilia;
+    private String aids;
+    private String gastrite;
+    private String enferVenerea;
+    private String depressao;
+    private String convulsao;
+    private String diabetes;
+    private String herpes;
+    private String hepatite;
+    private String desmaios;
+    private String febreReumatica;
+    private String tosse;
+    private String asma;
+    private String bronquite;
+    private String rinite;
+    private String sinusite;
+    private String tuberculose;
+    private String dorArtMandibula;
+    private String pressaoAlta;
+    private String tensao;
+    private String artrite;
+    private String reumatismo;
+    private String cirroseEpatica;
+    private String meningite;
+    private String sensibilidadeAlergica;
+    private String anestesico;
+    private String analgesico;
+    private String antInflamatorio;
+    private String antibiotico;
+    private String ulcera;
+    private String outrasDoencas;
 
-    @Enumerated(EnumType.STRING)
-    private TipoSanguineo tipoSanguineo;
+    // Medicamentos e tratamentos
+    private String tomandoMedicamento;
+    private String qualMedicamento;
+    private String fazendoTratamento;
+    private String qualTratamento;
+    private String fezRadioterapiaQuimioterapia;
 
-    @Enumerated(EnumType.STRING)
-    private SimNao anemia;
+    // Hábitos e condições
+    private String gengivaSangra;
+    private String rangeDente;
+    private String dormeBocaAberta;
+    private String ronca;
+    private String gravida;
+    private Integer mesesGravidez;
 
-    @Enumerated(EnumType.STRING)
-    private SimNao cardiopatias;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao hemorragia;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao hemofilia;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao aids;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao gastrite;
-
-    private String problemasGestacao;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao convulsao;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao depressao;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao diabetes;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao hepatite;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao herpes;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao desmaiosTonturas;
-
-    @Enumerated(EnumType.STRING)
-    private TipoParto parto;
-
-    @Enumerated(EnumType.STRING)
-    private SimNao tosseFrequente;
+    // Higiene bucal
+    private String ulitmoTratamento;
+    private String antesCafe;
+    private String depoisCafe;
+    private String depoisAlmoco;
+    private String depoisJanta;
+    private String antesDormir;
+    private String escovaDente;
+    private String tipoDePasta;
+    private String usaFluor;
+    private String fioDental;
 }
